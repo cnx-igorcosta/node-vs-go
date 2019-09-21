@@ -30,7 +30,7 @@ NodeJs e npm
   cd ./node-app
   npm start
 ```
-** url: http://localhost:8080 **
+*NodeJs server URL: http://localhost:8080*
 
 ### Go server
 ```
@@ -38,6 +38,6 @@ NodeJs e npm
   go build ./main.go
   ./go-app
 ```
-** url: http://localhost:8081 **
+*Go server URL: http://localhost:8081*
 
 Obs: Ideal testar cada server isoladamente para não ter nenhum tipo de interferência.
