@@ -10,7 +10,7 @@ Em cada um deles tem um código comentado que serve para criar, além da tarefa 
 Esses testes servem para simular rotinas de I/O que normalmente têm um custo mais pesado para as aplicações, pode ser testado também fazendo requisições http para outro server, conectando a banco de dados, etc...
 
 ## Ferramenta para benchmark
-Utilizei a ferramenta (Siege)[https://www.euperia.com/wrote/speed-testing-your-website-with-siege-part-one/] que estressa a aplicação e gera um relatório ao fim do teste com várias informações relevantes.
+Utilizei a ferramenta [Siege](https://www.euperia.com/wrote/speed-testing-your-website-with-siege-part-one/) que estressa a aplicação e gera um relatório ao fim do teste com várias informações relevantes.
 
 ### Comandos:
 siege -c10 -r1 -d10 -v http://localhost:8080
@@ -22,7 +22,7 @@ siege -c10 -r1 -d10 -v http://localhost:8080
 - Por último, a url a ser estressada
 
 ## Dependências
-NodeJs e npm
+[NodeJs, npm](https://nodejs.org/en/) e [Go](https://golang.org/dl/)
 
 ## Start dos servidores
 ### Node server:
