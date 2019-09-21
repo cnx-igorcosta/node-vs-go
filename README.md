@@ -3,9 +3,9 @@
 Um benchmark simples para avaliar a diferença de performance entre um server criado com NodeJs com o framework Express e um server em Go.
 
 ## Detalhes
-As duas aplicações fazem exatamente a mesma coisa: Levantam um servidor, expôem uma rota GET padrão "/" e a cada vez que bate nessa rota, eles abrem um arquivo numa pasta, lêem o conteúdo do arquivo, escrevem uma string randômica concatenando no conteúdo previamente existnte no arquivo e retornam essa string para o response.
+As duas aplicações fazem exatamente a mesma coisa: Levantam um servidor, expôem uma rota GET padrão ```/``` e a cada vez que bate nessa rota, eles abrem um arquivo numa pasta, lêem o conteúdo do arquivo, escrevem uma string randômica concatenando no conteúdo previamente existente no arquivo e retornam essa string para o response.
 
-Em cada um deles tem um código comentado que serve para criar, além da tarefa normal, um arquivo novo numa pasta com o conteúdo lido do arquivo anterior. Pode ser descomentado para comparar o desempenho das duas aplicações executando mais tarefas "pesadas".
+Em cada um deles tem um código comentado que serve para criar, além da tarefa normal, um arquivo novo numa pasta com o conteúdo lido do arquivo anterior. Pode ser descomentado para comparar o desempenho das duas aplicações executando tarefas mais "pesadas".
 
 Esses testes servem para simular rotinas de I/O que normalmente têm um custo mais pesado para as aplicações, pode ser testado também fazendo requisições http para outro server, conectando a banco de dados, etc...
 
@@ -13,7 +13,7 @@ Esses testes servem para simular rotinas de I/O que normalmente têm um custo ma
 Utilizei a ferramenta [Siege](https://www.euperia.com/wrote/speed-testing-your-website-with-siege-part-one/) que estressa a aplicação e gera um relatório ao fim do teste com várias informações relevantes.
 
 ### Comandos:
-siege -c10 -r1 -d10 -v http://localhost:8080
+```siege -c10 -r1 -d10 -v http://localhost:8080```
 
 - c10 é o numero de usuários concorrentes a gente quer simular.
 - r1 é o número de repetições cada usuário fará.
